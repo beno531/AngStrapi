@@ -8,10 +8,17 @@ import { NavComponent } from './nav/nav.component';
 import { ArticlesComponent } from './articles/articles.component';
 import { MarkdownModule } from "ngx-markdown";
 import { ArticleComponent } from './article/article.component';
+import { CategoryComponent } from './category/category.component';
+import { HomeComponent } from './home/home.component';
+import { ArticleshowcaseComponent } from './home/articleshowcase/articleshowcase.component';
+import { EventshowcaseComponent } from './home/eventshowcase/eventshowcase.component';
+
 
 const appRoutes: Routes = [
   { path: "", component: ArticlesComponent },
   { path: "article/:id", component: ArticleComponent },
+  { path: "category/:id", component: CategoryComponent },
+  { path: "home", component: HomeComponent },
 ];
 
 @NgModule({
@@ -20,6 +27,10 @@ const appRoutes: Routes = [
     NavComponent,
     ArticlesComponent,
     ArticleComponent,
+    CategoryComponent,
+    HomeComponent,
+    ArticleshowcaseComponent,
+    EventshowcaseComponent,
   ],
   imports: [
     BrowserModule,
